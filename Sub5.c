@@ -4,7 +4,7 @@
 int main() {
     int n;
     scanf("%d",&n);
-    int sum = n-5;
-    printf("%d",sum);
+    int sub = n-5;
+    printf("%d",sub);
     return 0;
 }
