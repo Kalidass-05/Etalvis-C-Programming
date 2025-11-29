@@ -7,13 +7,21 @@ int main() {
     scanf("%d",&n);
     int temp = n;
     int sum=0;
-    while(n!=0)
+    loop:if(n!=0)
     {
         sum+=n%10;
-        n/=10;
+        goto loop:n/=10;
     }
-    
-    printf("Output: %d",(sum%2)==1?temp-5:temp);
+    int k = sum%2;
+    switch(k)
+        {
+            case 0: 
+            printf("%d",temp);
+            break;
+            case 1:
+            printf("%d",temp-5);
+            break;
+        }
 
     return 0;
 }
